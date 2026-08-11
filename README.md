@@ -1,11 +1,9 @@
 # Mini RAG
 
-A framework-light, local-first Retrieval-Augmented Generation pipeline.
-Built from scratch (no LangChain / LlamaIndex orchestration) to understand every
+- A local Retrieval Augmented Generation (RAG) pipeline. So it runs entirely on a local machine, no external API calls, no cloud vector DB.
+- Built from scratch (no LangChain / LlamaIndex orchestration) to understand every
 stage of a modern RAG system: loading, chunking, embedding, ANN search, prompt
 construction, and local LLM generation.
-
-Runs entirely on a local machine — no external API calls, no cloud vector DB.
 
 ## Hardware target
 
@@ -45,20 +43,20 @@ To remove the env later: `conda deactivate && conda env remove -n mini-rag`
 
 ## Status
 
-Scaffold only — pipeline modules are being implemented phase by phase.
+Scaffold only, pipeline modules are being implemented phase by phase.
 
-- [ ] Phase 1 — Indexing (loader → splitter → embeddings → ChromaDB)
-- [ ] Phase 2 — Retrieval (dense top-K search)
-- [ ] Phase 3 — Generation (prompt builder + local LLM + citations)
-- [ ] Phase 4 — Enhancements (hybrid retrieval, reranking, semantic chunking, etc.)
+- Phase 1 - Indexing (loader → splitter → embeddings → ChromaDB)
+- Phase 2 - Retrieval (dense top-K search)
+- Phase 3 - Generation (prompt builder + local LLM + citations)
+- Phase 4 - Enhancements (hybrid retrieval, reranking, semantic chunking, etc.)
 
 ## Notebooks
 
 `notebooks/` contains two notebooks that mirror `scripts/build_index.py` and `scripts/query.py`,
 useful for interactive exploration:
 
-- **01_indexing.ipynb** — add new documents to `data/` and push them into ChromaDB, inspect the resulting collection
-- **02_query.ipynb** — ask questions, and separately inspect retrieval (chunks + distances) and the final prompt before generation
+- **01_documentIndexing.ipynb** - add new documents to `data/` and push them into ChromaDB, inspect the resulting collection
+- **02_doRAG.ipynb** - ask questions, and separately inspect retrieval (chunks + distances) and the final prompt before generation
 
 To register the kernel so it matches the notebooks' kernelspec:
 
