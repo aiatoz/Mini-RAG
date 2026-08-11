@@ -1,0 +1,26 @@
+#----------------------------------------------------------------------------<Core>-----------||
+torch>=2.2.0
+transformers>=4.44.0
+sentence-transformers>=3.0.0
+chromadb>=0.5.0
+numpy>=1.26.0
+accelerate>=0.33.0          # needed for device_map / low memory model loading
+bitsandbytes>=0.43.0        # 4-bit / 8-bit quantization so the LLM fits in 8GB VRAM
+
+
+#----------------------------------------------------------------------------<Utilities>------||
+langchain-text-splitters>=0.2.0   # only the splitter, not the full LangChain framework
+python-dotenv>=1.0.0              # optional: keep config/env values out of code
+tqdm>=4.66.0                      # progress bars during indexing
+
+
+
+#----------------------------------------------------------------------------<Notebooks>------||
+notebook>=7.0.0             # modern JupyterLab-based UI, not the old classic notebook interface
+ipykernel>=6.29.0
+
+
+#----------------------------------------------------------------------------<Future wrk>-----||
+rank-bm25>=0.2.2 				  #hybrid!!!!!!!
+faiss-cpu>=1.8.0
+streamlit>=1.37.0                 # optional web UI, Phase 4
