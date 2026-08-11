@@ -45,7 +45,7 @@ To remove the env later: `conda deactivate && conda env remove -n mini-rag`
 
 Scaffold only, pipeline modules are being implemented phase by phase.
 
-- Phase 1 - Indexing (loader → splitter → embeddings → ChromaDB)
+- Phase 1 - Indexing (loader -> splitter -> embeddings -> ChromaDB)
 - Phase 2 - Retrieval (dense top-K search)
 - Phase 3 - Generation (prompt builder + local LLM + citations)
 - Phase 4 - Enhancements (hybrid retrieval, reranking, semantic chunking, etc.)
