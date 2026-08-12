@@ -18,8 +18,8 @@ mini-rag/
 ├── data/            # source documents (.md / .txt), one subfolder per collection
 ├── cache/            # huggingface model cache
 ├── db/               # persistent Chroma store + bm25 index + metadata
-├── notebooks/         # 01_indexing.ipynb (add/maintain the vector DB), 02_query.ipynb (ask questions, inspect retrieval)
-├── prompts/           # system_prompt.txt — system instruction, kept out of Python code
+├── notebooks/         # indexing and querying notebooks
+├── prompts/           # system_prompt.txt : system instruction, kept out of Python code
 ├── scripts/          # entrypoints: build_index.py, query.py
 ├── src/               # pipeline modules (loader, splitter, embeddings, vectordb, retriever, prompt, generator, rag)
 ├── config.py          # single source of truth for all tunable parameters
